@@ -1,5 +1,5 @@
 {
-	"name": "test-rn-expo",
+	"name": "rn-expo-starter",
 	"version": "1.0.1",
 	"main": "node_modules/expo/AppEntry.js",
 	"scripts": {
@@ -10,7 +10,9 @@
 		"check-typescript": "tsc --noEmit",
 		"check-eslint": "eslint './src/**/*{js,ts,jsx,tsx}'",
 		"lint": "npm run check-typescript && npm run check-eslint",
-		"release": "standard-version"
+		"release": "standard-version",
+		"prepare": "husky install",
+		"scriptname": "husky install"
 	},
 	"dependencies": {
 		"@types/react": "~18.0.27",
@@ -22,6 +24,8 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.0",
+		"@commitlint/cli": "^17.4.4",
+		"@commitlint/config-conventional": "^17.4.4",
 		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.54.0",
 		"@typescript-eslint/parser": "^5.54.0",
@@ -31,8 +35,16 @@
 		"eslint-plugin-react": "^7.30.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-native": "^4.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.2",
 		"prettier": "^2.8.4",
 		"standard-version": "^9.5.0"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx}": [
+			"eslint './src/**/*{js,ts,jsx,tsx}' --fix",
+			"prettier --write './src/**/*{js,ts,jsx,tsx}'"
+		]
 	},
 	"private": true
 }

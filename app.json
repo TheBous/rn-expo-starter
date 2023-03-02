@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test-rn-expo",
-    "slug": "test-rn-expo",
+    "name": "rn-expo-starter",
+    "slug": "rn-expo-starter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
