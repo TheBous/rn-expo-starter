@@ -1,21 +1,38 @@
 {
-  "name": "test-rn-expo",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~48.0.4",
-    "expo-status-bar": "~1.4.4",
-    "react": "18.2.0",
-    "react-native": "0.71.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+	"name": "test-rn-expo",
+	"version": "1.0.1",
+	"main": "node_modules/expo/AppEntry.js",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"check-typescript": "tsc --noEmit",
+		"check-eslint": "eslint './src/**/*{js,ts,jsx,tsx}'",
+		"lint": "npm run check-typescript && npm run check-eslint",
+		"release": "standard-version"
+	},
+	"dependencies": {
+		"@types/react": "~18.0.27",
+		"expo": "~48.0.4",
+		"expo-status-bar": "~1.4.4",
+		"react": "18.2.0",
+		"react-native": "0.71.3",
+		"typescript": "^4.9.4"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.0",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"@typescript-eslint/eslint-plugin": "^5.54.0",
+		"@typescript-eslint/parser": "^5.54.0",
+		"eslint": "^8.35.0",
+		"eslint-config-universe": "^11.2.0",
+		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-plugin-react": "^7.30.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-native": "^4.0.0",
+		"prettier": "^2.8.4",
+		"standard-version": "^9.5.0"
+	},
+	"private": true
 }
