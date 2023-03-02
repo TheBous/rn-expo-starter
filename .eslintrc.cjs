@@ -4,6 +4,7 @@ module.exports = {
 		"universe/shared/typescript-analysis",
 		"plugin:react-hooks/recommended",
 		"plugin:react/recommended",
+		"prettier",
 	],
 	plugins: ["react"],
 	rules: {
